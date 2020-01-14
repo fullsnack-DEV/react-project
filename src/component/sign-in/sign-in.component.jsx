@@ -4,6 +4,7 @@ import "./sign-in.style.scss";
 
 import FormInput from "../form-input/form-input.component";
 import CustonButton from "../cutom-button/custom-button.component";
+import { signInWithGoogle } from "../../firebase/firebase.utilis";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -50,6 +51,9 @@ class SignIn extends React.Component {
           />
 
           <CustonButton type="submit"> Sign In </CustonButton>
+          <CustonButton onClick={signInWithGoogle}>
+            Sign in with Google
+          </CustonButton>
         </form>
       </div>
     );
