@@ -50,7 +50,7 @@ class SignIn extends React.Component {
             required
           />
 
-          <div className="button">
+          <div className="buttons">
             <CustonButton type="submit"> Sign In </CustonButton>
             <CustonButton onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
