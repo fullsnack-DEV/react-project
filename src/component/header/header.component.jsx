@@ -8,8 +8,8 @@ import { auth } from "../../firebase/firebase.utilis";
 const Header = ({ currentUser }) => (
   <div className="header">
     <Link className="logo-container" to="/">
-      <Logo />
-    </Link>
+      <Logo /> 
+    </Link> 
 
     <div className="options">
       <Link className="option" to="/shop">
@@ -19,10 +19,7 @@ const Header = ({ currentUser }) => (
       <Link className="option" to="/shop">
         Contact
       </Link>
-      {     
-        
-        
-        currentUser ? (
+      {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
         </div>
