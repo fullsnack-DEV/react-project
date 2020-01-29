@@ -1,4 +1,5 @@
 // this is the user redicer code where we van put all the user reducer codes in order to gave grouping to them
+import { UserActionType } from "./user.types";
 
 const INTIAL_STATE = {
   currentUser: null
@@ -6,10 +7,10 @@ const INTIAL_STATE = {
 
 const userReducer = (state = INTIAL_STATE, action) => {
   switch (action.type) {
-    case "SET_CURRENT_USER":
+    case UserActionType.SET_CURRENT_USER:
       return {
         ...state,
-        currenrUser: action.payload
+        currentUser: action.payload
       };
     default:
       return state;
