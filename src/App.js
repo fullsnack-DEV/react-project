@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import "./App.css";
 import ShopPage from "./pages/shop/shop.component";
+import CheckoutPage from "./pages/Checkout/Checkout.component";
 import SignInAndSignUp from "./pages/sign-in and sign-up/sign-in and sign-up component";
 import Header from "./component/header/header.component";
 import { auth, UserProfileDocument } from "./firebase/firebase.utilis";
@@ -49,12 +50,14 @@ class App extends React.Component {
               this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUp />
             }
           />
+
+          <Route path="/Checkout" component={CheckoutPage} />
         </Switch>
       </div>
     );
   }
 }
-
+//this is the check put section for the product page and the related data we want to chcoout
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentuser
 });
